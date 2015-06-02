@@ -1,10 +1,13 @@
 @import "global";
 
-
-body
-{
+body {
   background: $color1;
   overflow-x: hidden;
   color: #060606;
   font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
 }

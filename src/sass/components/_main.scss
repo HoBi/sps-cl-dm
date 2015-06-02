@@ -7,7 +7,7 @@ $main-hd-font-big: 700 50px 'Roboto Condensed';
 $main-hd-font: 300 25px 'Roboto Condensed';
 $main-hd-p-padding: 15px;
 
-$main-art-font: 300 18px/1.5 'Roboto Condensed';
+$main-art-font: 300 18px#{"/"}38px 'Roboto Condensed';
 $main-art-padding: 50px;
 
 %responsive {
@@ -178,14 +178,17 @@ main {
     background: $color1;
     border-top: 1px solid darken($color1, 10%);
     margin: 0 auto;
+    height: 40px;
+    padding: 0;
+
     p {
       @extend %responsive;
       color: #666;
       margin: 0 auto;
       font: $main-art-font;
-      line-height: 40px;
       a {
         color: $color3;
+        font: inherit;
         font-weight: bold;
         &:hover {
           border-bottom: 1px dashed #F04A4A;

@@ -21,18 +21,18 @@ $sb-hed-img-width: 55px;
 $sb-hed-font-width: 18px;
 $sb-hed-padding: 10px;
 $sb-hed-font-line: 22px;
-$sb-hed-font: 200 $sb-hed-font-width + " " + $sb-hed-font-line 'Exo 2';
+$sb-hed-font: 200 $sb-hed-font-width#{"/"}$sb-hed-font-line 'Exo 2';
 
 sidebar {
-
   @import "../base/_global";
   width: $sb-width;
-
+  margin: 0;
   height: 100%;
   background: $bg1;
   position: fixed;
-  top: 0px;
+  top: 0;
   left: - $sb-width;
+  border: 0;
   border-right: 1px solid $bg2;
   z-index: 50;
   &.aktivni {
@@ -55,7 +55,6 @@ sidebar {
       width: $sb-tb-width;
       line-height: $sb-tb-width;
       cursor: pointer;
-      color: $sb-color;
       border-bottom: 1px solid $bg2;
       &:hover {
         color: #fff;
@@ -82,12 +81,11 @@ sidebar {
           height: 100%;
           span {
             border-radius: 50%;
-            margin: 0px auto;
+            margin: 0 auto;
             display: block;
             width: $sb-tb-c-width;
             height: $sb-tb-c-width;
             background: $sb-color;
-
           }
           &:hover {
             span {
@@ -115,12 +113,12 @@ sidebar {
     }
     img {
       height: $sb-hed-img-width;
-      margin: 0px auto;
+      margin: 0 auto;
       display: block;
     }
     h1 {
       color: $sb-color;
-      margin: 0px auto;
+      margin: 0 auto;
       margin-top: $sb-hed-padding;
       text-align: center;
       font: $sb-hed-font;
@@ -131,7 +129,6 @@ sidebar {
   nav {
     width: 100%;
     padding: $sb-hed-padding*2 0;
-    //border-top: 1px $sb-border-style lighten($sb-border-color, 15%);
     ul {
       width: 100%;
       li {
@@ -151,18 +148,18 @@ sidebar {
   .social {
     border-top: 1px solid $bg2;
     background: $bg1;
-    //border-top: 1px solid $sb-border-color;
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     width: $sb-width + $sb-tb-width;
     height: $sb-soc-height;
+
     @each $soc in $sb-soc-list {
       .#{$soc}-icon {
-        background: url('img/icon/#{$soc}.png') no-repeat;
+        background: url('../img/icon/#{$soc}.png') no-repeat;
         background-size: 100%;
         &:hover {
-          background: url('img/icon/#{$soc}_hover.png') no-repeat;
+          background: url('../img/icon/#{$soc}_hover.png') no-repeat;
           background-size: 100%;
         }
       }
@@ -174,6 +171,8 @@ sidebar {
       float: left;
       position: relative;
       left: 50%;
+      text-decoration: none;
+      list-style-type: none;
       li {
         width: $sb-soc-item-height;
         height: $sb-soc-item-height;
