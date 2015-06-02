@@ -7,8 +7,10 @@ $main-hd-font-big: 700 50px 'Roboto Condensed';
 $main-hd-font: 300 25px 'Roboto Condensed';
 $main-hd-p-padding: 15px;
 
-$main-art-font: 300 18px#{"/"}38px 'Roboto Condensed';
+$main-art-font: 300 18px/1.5 'Roboto Condensed';
 $main-art-padding: 50px;
+
+$main-ftr-font: 300 18px#{"/"}38px 'Roboto Condensed';
 
 %responsive {
   max-width: $main-max-width;
@@ -185,7 +187,7 @@ main {
       @extend %responsive;
       color: #666;
       margin: 0 auto;
-      font: $main-art-font;
+      font: $main-ftr-font;
       a {
         color: $color3;
         font: inherit;
