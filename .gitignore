@@ -1,5 +1,7 @@
 # Created by https://www.gitignore.io
 
+css/
+
 ### SublimeText ###
 # cache files for sublime text
 *.tmlanguage.cache
@@ -316,3 +318,5 @@ crashlytics-build.properties
 ### Sass ###
 .sass-cache
 *.css.map
+
+src/css
