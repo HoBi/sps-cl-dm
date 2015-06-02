@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+
+// Importuje CSS reset.
+@import "base/reset";
+
+// Importuje CSS lightboxu.
+@import "vendor/lightbox";
+
+// Importuje styly pro obecné HTML elements.
+@import "base/elements";
+
+//
+// Import komponent
+//
+
+@import "components/main";
+@import "components/sidebar";

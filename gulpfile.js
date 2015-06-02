@@ -5,15 +5,14 @@ var gulp = require('gulp'),
   notify = require('gulp-notify'),
   sourcemaps = require('gulp-sourcemaps');
 
-var source = './';
-var build = './build/';
+var source = './src/';
 
 var input = {
   sass: source + 'sass/**/*.scss'
 };
 
 var output = {
-  sass: './css/',
+  sass: source + './css/',
   maps: 'maps/'
 };
 

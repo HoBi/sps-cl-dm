@@ -1,0 +1,192 @@
+
+$sb-color: #D8D8D8;
+
+$sb-border-color: #191919;
+
+$sb-tb-width: 40px;
+$sb-tb-border: 2px;
+$sb-tb-c-width: 9px;
+
+$sb-border-color: #111;
+$sb-border-style: dotted;
+
+$sb-nav-font: 200 16px/1.75 'Roboto Condensed';
+
+$sb-soc-height: 40px;
+$sb-soc-list: facebook googleplus twitter youtube;
+$sb-soc-item-height: 25px;
+$sb-soc-padding: 3px;
+
+$sb-hed-img-width: 55px;
+$sb-hed-font-width: 18px;
+$sb-hed-padding: 10px;
+$sb-hed-font-line: 22px;
+$sb-hed-font: 200 $sb-hed-font-width + " " + $sb-hed-font-line 'Exo 2';
+
+sidebar {
+
+  @import "../base/_global";
+  width: $sb-width;
+
+  height: 100%;
+  background: $bg1;
+  position: fixed;
+  top: 0px;
+  left: - $sb-width;
+  border-right: 1px solid $bg2;
+  z-index: 50;
+  &.aktivni {
+    left: 0;
+  }
+
+  .toolbar {
+    background: $bg1;
+    height: 100%;
+    width: $sb-tb-width;
+    border-right: $sb-tb-border solid $color3;
+    //border-bottom: 1px solid $color3;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: - $sb-tb-width - $sb-tb-border - 1;
+    .skryj {
+      height: (3*$sb-hed-padding) + $sb-hed-img-width + $sb-hed-font-line;
+      color: $sb-color;
+      width: $sb-tb-width;
+      line-height: $sb-tb-width;
+      cursor: pointer;
+      color: $sb-color;
+      border-bottom: 1px solid $bg2;
+      &:hover {
+        color: #fff;
+      }
+      i {
+        width: 100%;
+        height: 100%;
+        line-height: (3*$sb-hed-padding) + $sb-hed-img-width + $sb-hed-font-line;
+        display: none;
+        font-size: 25px;
+        &.aktivni {
+          display: block;
+        }
+      }
+    }
+    .slider {
+      margin: 2*$sb-hed-padding 0;
+      li {
+        display: block;
+        a {
+          padding: 5px 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          span {
+            border-radius: 50%;
+            margin: 0px auto;
+            display: block;
+            width: $sb-tb-c-width;
+            height: $sb-tb-c-width;
+            background: $sb-color;
+
+          }
+          &:hover {
+            span {
+              background: #fff;
+            }
+          }
+        }
+        &.aktivni {
+          a span {
+            background: $color3;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    background: $bg1;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid $bg2;
+    a {
+      padding: $sb-hed-padding 0;
+      display: block;
+    }
+    img {
+      height: $sb-hed-img-width;
+      margin: 0px auto;
+      display: block;
+    }
+    h1 {
+      color: $sb-color;
+      margin: 0px auto;
+      margin-top: $sb-hed-padding;
+      text-align: center;
+      font: $sb-hed-font;
+      text-transform: uppercase;
+    }
+  }
+
+  nav {
+    width: 100%;
+    padding: $sb-hed-padding*2 0;
+    //border-top: 1px $sb-border-style lighten($sb-border-color, 15%);
+    ul {
+      width: 100%;
+      li {
+        width: 100%;
+        text-align: center;
+        a {
+          color: $sb-color;
+          font: $sb-nav-font;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .social {
+    border-top: 1px solid $bg2;
+    background: $bg1;
+    //border-top: 1px solid $sb-border-color;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: $sb-width + $sb-tb-width;
+    height: $sb-soc-height;
+    @each $soc in $sb-soc-list {
+      .#{$soc}-icon {
+        background: url('img/icon/#{$soc}.png') no-repeat;
+        background-size: 100%;
+        &:hover {
+          background: url('img/icon/#{$soc}_hover.png') no-repeat;
+          background-size: 100%;
+        }
+      }
+    }
+
+    ul {
+      height: 100%;
+      padding-top: ($sb-soc-height - $sb-soc-item-height)/2;
+      float: left;
+      position: relative;
+      left: 50%;
+      li {
+        width: $sb-soc-item-height;
+        height: $sb-soc-item-height;
+        margin: 0 $sb-soc-padding;
+        float: left;
+        position: relative;
+        right: 50%;
+        a {
+          width: $sb-soc-item-height;
+          height: $sb-soc-item-height;
+          display: block;
+        }
+      }
+    }
+  }
+}
