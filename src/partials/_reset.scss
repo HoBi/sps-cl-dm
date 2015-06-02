@@ -1,0 +1,25 @@
+html,body{
+   height: 100%;
+}
+
+body
+{
+   background: $color1;
+   overflow-x: hidden;
+   color: #060606;
+   font-family: 'Open Sans', arial;
+}
+
+*
+{
+   margin         : 0px;
+   padding        : 0px;
+   text-decoration: none;
+   list-style-type: none;
+   border         : 0px;
+}
+
+section, main, article, aside, header, footer, nav, figure, figcaption, time, mark
+{
+   display: block;
+}
