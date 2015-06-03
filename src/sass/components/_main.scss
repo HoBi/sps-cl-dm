@@ -87,9 +87,8 @@ main {
       .obrazky {
         width: 100%;
         a {
-          float: left;
+          display: inline-block;
           width: 32%;
-          display: block;
           margin-left: 1%;
           margin-bottom: 1%;
           img {
@@ -190,7 +189,6 @@ main {
       font: $main-ftr-font;
       a {
         color: $color3;
-        font: inherit;
         font-weight: bold;
         &:hover {
           border-bottom: 1px dashed #F04A4A;
