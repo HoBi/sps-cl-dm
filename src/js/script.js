@@ -21,7 +21,7 @@ $(function(){
       activeItem();
    });
 
-   $('.slider a').on('click', function(e){
+   $('.slider a, .kotva').on('click', function(e){
      var odkaz = $(this).attr('href'),
          rychlost = 1000,
          efekt = "easeInOutQuart";
