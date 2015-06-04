@@ -86,11 +86,20 @@ main {
       overflow: hidden;
       .obrazky {
         width: 100%;
+        font-size: 0;
+        margin: 0 auto;
+
+        &.male {
+          width: 60%;
+        }
+
         a {
           display: inline-block;
           width: 32%;
           margin-left: 1%;
           margin-bottom: 1%;
+          vertical-align: middle;
+
           img {
             display: block;
             width: 100%;
